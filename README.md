@@ -39,7 +39,7 @@ O site foi construído utilizando uma variedade de tecnologias e ferramentas mod
 
 Estou aberto a colaborações e feedback. Se você tiver sugestões ou quiser discutir possíveis projetos, por favor, entre em contato comigo:
 
-- **Site**: [LC Developer](#)
+- **Site**: [LC Developer](https://yleonardo99.github.io/portfolioV2/index.html)
 - **Email**: [leo205283@gmail.com](leo205283@gmail.com)
 - **LinkedIn**: [Leonardo Cassiano](https://www.linkedin.com/in/leonardo-cassiano-435b62257/)
 - **WhatsApp**: [(11) 94488-4255](https://wa.me/5511944884255)

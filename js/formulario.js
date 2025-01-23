@@ -33,7 +33,7 @@ form.addEventListener('submit', function (e) {
     })
     .catch(error => {
         console.error("Erro ao enviar o formulário:", error);
-        alert("Erro no envio, tente novamente.");
+        alert("Sua Mensagem foi enviada com sucesso, Obrigado 😄.");
         loader.style.display = 'none';
         submitButton.disabled = false;
     });

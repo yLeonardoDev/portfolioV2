@@ -1486,9 +1486,10 @@ body {
     text-align: center;
 }
 /* contato */
+
 /* Loader */
 .loader {
-    position: fixed; /* Usar fixed para que o loader fique no centro da tela */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
@@ -1496,8 +1497,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999; /* Assegura que o loader fique acima de outros elementos */
-    background: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+    z-index: 9999; 
+    background: rgba(0, 0, 0, 0.5); 
 }
 
 .text {

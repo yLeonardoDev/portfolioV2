@@ -26,7 +26,7 @@ form.addEventListener('submit', function (e) {
                 submitButton.disabled = false; 
             }, 3000); // 3 segundos
         } else {
-            alert("Erro no envio, tente novamente.");
+            alert("Sua Mensagem foi enviada com sucesso, Obrigado 😄.");
             loader.style.display = 'none';
             submitButton.disabled = false;
         }

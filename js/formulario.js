@@ -1,4 +1,3 @@
-
 const form = document.getElementById('contact-form');
 const loader = document.getElementById('loader');
 const successMessage = document.getElementById('form-success');
@@ -17,23 +16,19 @@ form.addEventListener('submit', function (e) {
         body: new FormData(form)
     })
     .then(response => {
+        loader.style.display = 'none';
+        submitButton.disabled = false;
+
         if (response.ok) {
-           
-            setTimeout(() => {
-                loader.style.display = 'none'; 
-                successMessage.style.display = 'block'; 
-                form.reset(); 
-                submitButton.disabled = false; 
-            }, 3000); // 3 segundos
+            successMessage.style.display = 'block';
+            form.reset();
         } else {
-            alert("Sua Mensagem foi enviada com sucesso, Obrigado 😄.");
-            loader.style.display = 'none';
-            submitButton.disabled = false;
+            alert("Erro no envio, tente novamente."); // Mensagem de erro
         }
     })
     .catch(error => {
         console.error("Erro ao enviar o formulário:", error);
-        alert("Sua Mensagem foi enviada com sucesso, Obrigado 😄.");
+        alert("Erro no envio, tente novamente."); // Mensagem de erro
         loader.style.display = 'none';
         submitButton.disabled = false;
     });

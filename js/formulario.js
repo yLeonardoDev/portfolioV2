@@ -21,27 +21,18 @@ form.addEventListener('submit', function (e) {
 
         if (response.ok) {
             successMessage.style.display = 'block';
-            form.reset();
+            successMessage.style.color = 'green';
+            form.reset(); 
             setTimeout(() => {
                 successMessage.style.display = 'none';
-            }, 2000); // 2 segundos
+            }, 2000);
         } else {
-            showError();
+            console.error("Erro no envio, tente novamente.");
         }
     })
     .catch(error => {
         console.error("Erro ao enviar o formulário:", error);
-        showError();
+        loader.style.display = 'none';
+        submitButton.disabled = false;
     });
 });
-
-function showError() {
-    const errorMessage = document.createElement('span');
-    errorMessage.textContent = "Erro no envio, tente novamente.";
-    errorMessage.classList.add('error-message');
-    form.appendChild(errorMessage);
-
-    setTimeout(() => {
-        errorMessage.remove();
-    }, 2000); // 2 segundos
-}

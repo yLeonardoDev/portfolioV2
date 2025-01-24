@@ -152,6 +152,7 @@ body {
 }
 
 /* BTN PADRÃO */
+
 .btn {
     padding: 0.7rem 1.5rem;
     cursor: pointer;
@@ -161,9 +162,27 @@ body {
     background-color: var(--blue);
     color: var(--white);
     font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.btn-about {
+    display: flex;
+    gap: 15px;
 }
 
 /* HEADLINE SECTION PAGES */
+
 .headline {
     width: 100%;
     padding: 1.5rem 0rem 1.5rem 0rem;
@@ -182,6 +201,7 @@ body {
 }
 
 /* HEADER */
+
 .header {
     width: 100%;
     padding: 1rem 0rem;
@@ -513,8 +533,7 @@ body {
     width: 32px;
 }
 
-/* ===========================Efeito Hover para Icones =============================================== */
-
+/* ===========================Efeito Hover para Icones - About =============================================== */
 
 .card-tech {
     display: flex;
@@ -522,12 +541,10 @@ body {
     align-items: center;
     flex-direction: column;
     transition: transform 0.3s ease, color 0.3s ease;
-    /* Animação suave */
 }
 
 .card-tech i {
     transition: transform 0.3s ease, color 0.3s ease;
-    /* Animação suave nos ícones */
 }
 
 .card-tech:hover i {
@@ -575,7 +592,6 @@ body {
     /* Cor do Java */
 }
 
-
 .card-tech:hover i.fa-wordpress {
     color: #21759b;
     /* Cor do WordPress */
@@ -583,56 +599,64 @@ body {
 
 .card-tech:hover i.fa-wix {
     color: #03908b;
-    /* Cor do Wix */
+    /* Cor do Wix*/
 }
 
-.figma-icon {
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-weight: 700;
-    color: #fff;
-    background: none;
-    transition: transform 0.3s ease, color 0.5s ease-in-out, background 0.5s ease-in-out;
-    position: relative;
-    overflow: hidden;
+.card-tech:hover i.devicon-mysql-plain {
+    color: #006F71;
+    /* Cor do MySQL*/
 }
 
-.card-tech:hover .figma-icon {
-    transform: scale(1.2);
-    color: transparent;
-    background: linear-gradient(45deg, #f24e1e, #ff61b2, #c46de4, #4e7bbf, #08a3a3);
-    -webkit-background-clip: text;
-    background-clip: text;
+.card-tech:hover i.fa-sass {
+    color: #CC6699;
+    /* Cor do Sass */
 }
 
-
-.card-tech:hover .figma-icon:before {
-    content: "F";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
+.card-tech:hover i.devicon-csharp-plain {
+    color: #68217A;
+    /* Cor do C# */
 }
 
+.card-tech:hover i.devicon-spring-plain {
+    color: #3C873A;
+    /* Cor do Spring Boot */
+}
 
-/* Animação para o movimento suave do chevron */
+.card-tech svg {
+    fill: #FFFFFF;
+    /* Cor inicial do Excel */
+}
 
-@keyframes bounce {
+.card-tech:hover svg {
+    fill: #0F7840;
+    /* Cor do Excel final */
+}
 
-    0%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
+/* FIGMA hover */
 
-    50% {
-        transform: translateX(-50%) translateY(-20px);
-    }
+.card-tech:hover .circle-1 {
+    fill: #F24D18;
+    /*SUPERIOR ESQUERDA*/
+}
+
+.card-tech:hover .circle-2 {
+    fill: #FF7362;
+    /*SUPERIOR DIREITA*/
+}
+
+.card-tech:hover .circle-3 {
+    fill: #9D56F7;
+    /*CENTRO*/
+}
+
+.card-tech:hover .circle-4 {
+    fill: #02D084;
+    /*INFERIOR*/
+}
+
+.card-tech:hover .circle-5 {
+    fill: #13BDFE;
+    /*CENTRO DIREITO*/
 }
 
 /*SKILLS*/
@@ -1485,11 +1509,12 @@ body {
     font-size: 1rem;
     text-align: center;
 }
+
 /* contato */
 
 /* Loader */
 .loader {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -1497,8 +1522,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999; 
-    background: rgba(0, 0, 0, 0.5); 
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .text {
@@ -1538,19 +1563,35 @@ body {
 }
 
 @keyframes rotate1 {
-    0% { transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg); }
-    100% { transform: rotateX(45deg) rotateY(-45deg) rotateZ(360deg); }
-}
-@keyframes rotate2 {
-    0% { transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg); }
-    100% { transform: rotateX(45deg) rotateY(45deg) rotateZ(360deg); }
-}
-@keyframes rotate3 {
-    0% { transform: rotateX(-60deg) rotateY(0deg) rotateZ(0deg); }
-    100% { transform: rotateX(-60deg) rotateY(0deg) rotateZ(360deg); }
+    0% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(360deg);
+    }
 }
 
-/* Mensagem de sucesso */
+@keyframes rotate2 {
+    0% {
+        transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(45deg) rotateY(45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotateX(-60deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(-60deg) rotateY(0deg) rotateZ(360deg);
+    }
+}
+
 .success-message {
     font-size: 18px;
     color: green;

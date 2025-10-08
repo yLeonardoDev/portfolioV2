@@ -632,6 +632,23 @@ body {
     /* Cor do Excel final */
 }
 
+.powerbi-simple {
+    width: 4rem;
+    height: 4rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.card-tech:hover .powerbi-simple {
+    color: #F2C811;
+    /* Cor do Power BI */
+}
+
+.card-tech:hover .devicon-tailwindcss-plain {
+    color: #38BDF8 !important;
+    /* Cor do Tailwind */
+}
+
 /* FIGMA hover */
 
 .card-tech:hover .circle-1 {
